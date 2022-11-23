@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif
+}
+body {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "main main main";
+    grid-template-rows: auto 100vh;
+}
+
+
+.cabecalho {
+    display: flex;
+    grid-area: header;
+    background-color: #153D30;
+    padding: 30px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+}
+.listaNav {
+    display: flex;
+}
+.itemNav {
+    list-style: none;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+.linkNav {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+.linkNav:hover {
+    background-color: #042326;
+}
+
+
+.secaoCabecalho {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+.plankImgBarra {
+    width: 150px;
+}
+.perfilLogin {
+    width: 20px;
+    padding: 10px;
+    border-radius: 50%;
+}
+.perfilLogin:hover {
+    cursor: pointer;
+    background-color: #042326;
+}
+
+
+
+
+.conteudoPrincipal {
+    grid-area: main;
+    margin-top: 25px;
+}
+.secaoConteudo {
+    display: flex;
+    align-items: center;
+    width: 80vh;
+    height: 120px;
+    padding: 15px;
+    margin: 30px auto 30px auto;
+}
+.secaoConteudo:hover {
+    transition: 0.5s;
+    box-shadow: 2px 2px 2.5px 0.2px rgba(172, 172, 172, 0.767);
+}
+.parteImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    padding: 15px;
+    border-right: 1px solid rgba(165, 165, 165, 0.699);
+}
+.imgContato {
+    width: 100px;
+}
+.parteTxt {
+    margin-left: 20px;
+}
+.tituloSec {
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 2px;
+}

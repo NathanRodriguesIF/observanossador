@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Plank</title>
+    <link rel="stylesheet" href="mapaStyle.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="barraNavegacao">
+            <ul class="listaNav">
+                <li class="itemNav">
+                    <a href="index.html" class="linkNav">HOME</a>
+                </li>
+                <li class="itemNav">
+                    <a href="mapa.html" class="linkNav">MAPA</a>
+                </li>
+                <li class="itemNav">
+                    <a href="info.html" class="linkNav">INFORMAÇÕES</a>
+                </li>
+                <li class="itemNav">
+                    <a href="denuncia.html" class="linkNav">DENÚNCIA</a>
+                </li>
+                <li class="itemNav">
+                    <a href="contato.html" class="linkNav">CONTATO</a>
+                </li>
+            </ul>
+        </nav>
+        <section class="secaoCabecalho">
+            <img src="assets/Logo-Plank.png" alt="Logo-Plank" class="plankImgBarra">
+            <img src="assets/user-white.png" alt="Login" class="perfilLogin">
+        </section>
+    </header>
+    <main class="conteudoPrincipal">
+        <section class="secaoFiltro">
+            <section class="cabecalhoFiltro">
+                <p class="tituloFiltro">Filtro</p>
+                <img src="assets/filter.png" alt="Botão Filtro" class="imgFiltro" onclick="MostrarFiltros()">
+            </section>
+            <section class="itensFiltro" id="conteudoFiltro">
+                <aside class="conjuntoFiltro">
+                    <p class="itemPrincipal">Cidades</p>
+                    <p class="subItem">Belo Horizonte</p>
+                    <p class="subItem">Sabará</p>
+                </aside>
+                <aside class="conjuntoFiltro">
+                    <p class="itemPrincipal">Violências</p>
+                    <p class="subItem">Esteriótipo</p>
+                    <p class="subItem">LGBTfobia</p>
+                    <p class="subItem">Machismo</p>
+                    <p class="subItem">Capacitismo</p>
+                    <p class="subItem">Racismo</p>
+                    <p class="subItem">Xenofobia</p>
+                    <p class="subItem">Elitismo Classista</p>
+                    <p class="subItem">Gordofobia</p>
+                    <p class="subItem">Intolerância Religiosa</p>
+                </aside>
+            </section>
+        </section>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d240097.49507882743!2d-44.10413384694816!3d-19.90233864959343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa690cacacf2c33%3A0x5b35795e3ad23997!2sBelo%20Horizonte%2C%20MG!5e0!3m2!1spt-BR!2sbr!4v1669136046489!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="mapa"></iframe>
+    </main>
+    <script>
+        contador = 0;
+        function MostrarFiltros() {
+            conteudo = document.getElementById("conteudoFiltro");
+            itens = document.getElementsByClassName("subItem");
+            if (contador == 0) {
+                conteudo.style.opacity = "1";
+                contador += 1;
+            } else if (contador == 1) {
+                conteudo.style.opacity = "0";
+                contador = 0;
+            }
+            
+        }
+    </script>
+</body>
+</html>

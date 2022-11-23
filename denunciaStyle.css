@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif
+}
+body {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "section section section"
+        "main main main";
+    grid-template-rows: auto auto 100vh;
+}
+
+
+.cabecalho {
+    display: flex;
+    grid-area: header;
+    background-color: #153D30;
+    padding: 30px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+}
+.listaNav {
+    display: flex;
+}
+.itemNav {
+    list-style: none;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+.linkNav {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+.linkNav:hover {
+    background-color: #042326;
+}
+
+
+.secaoCabecalho {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+.plankImgBarra {
+    width: 150px;
+}
+.perfilLogin {
+    width: 20px;
+    padding: 10px;
+    border-radius: 50%;
+}
+.perfilLogin:hover {
+    cursor: pointer;
+    background-color: #042326;
+}
+
+
+.secaoInformativa {
+    margin: auto;
+    grid-area: section;
+    margin-top: 25px;
+}
+.textoInformativo {
+    text-align: center;
+}
+
+
+.conteudoPrincipal {
+    grid-area: main;
+    margin-top: 25px;
+}
+#denuncie {
+    color: #C48A25;
+    text-align: center;
+}
+
+#formularioDenuncia {
+    width: 70vh;
+    margin: auto;
+    margin-top: 5px;
+    background-color: rgb(255, 238, 218);
+    border-radius: 15px;
+    padding: 15px;
+}
+.formPart1 {
+    padding: 20px;
+    border-color: rgb(255, 223, 187);
+    border-radius: 15px;
+}
+.itensForm {
+    margin-bottom: 10px;
+}
+.tiposViolencia {
+    margin: 3px 0px 10px 15px;
+}
+.itemTiposViolencia {
+    margin-bottom: 5px;
+}
+label {
+    margin-left: 5px;
+}
+#inputOutro {
+    display: none;
+    margin-left: 10px;
+}
+#inputComo {
+    width: 30vh;
+}
+
+.botoesFormAs {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0px 0px 0px;
+}
+.botoesForm {
+    background-color: rgb(255, 233, 208);
+    border: 1px solid rgb(134, 104, 69);
+    cursor: pointer;
+    width: 75px;
+    height: 55px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.botoesForm:hover {
+    background-color: rgb(255, 224, 189);
+}

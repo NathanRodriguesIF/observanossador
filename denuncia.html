@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Plank</title>
+    <link rel="stylesheet" href="denunciaStyle.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="barraNavegacao">
+            <ul class="listaNav">
+                <li class="itemNav">
+                    <a href="index.html" class="linkNav">HOME</a>
+                </li>
+                <li class="itemNav">
+                    <a href="mapa.html" class="linkNav">MAPA</a>
+                </li>
+                <li class="itemNav">
+                    <a href="info.html" class="linkNav">INFORMAÇÕES</a>
+                </li>
+                <li class="itemNav">
+                    <a href="denuncia.html" class="linkNav">DENÚNCIA</a>
+                </li>
+                <li class="itemNav">
+                    <a href="contato.html" class="linkNav">CONTATO</a>
+                </li>
+            </ul>
+        </nav>
+        <section class="secaoCabecalho">
+            <img src="assets/Logo-Plank.png" alt="Logo-Plank" class="plankImgBarra">
+            <img src="assets/user-white.png" alt="Login" class="perfilLogin">
+        </section>
+    </header>
+    <section class="secaoInformativa">
+        <p class="textoInformativo">As sua denúncia pode ser totalmente <b>ANÔNIMA</b> de acordo com suas preferências!!!</p>
+    </section>
+    <main class="conteudoPrincipal">
+        <h1 id="denuncie">DENUNCIE!!!</h1>
+        <form action="" method="post" id="formularioDenuncia">
+            <fieldset class="formPart1">
+                <aside class="itensForm">Nome: <input type="text" name="nome"><label for="nome">(Opicional)</label></aside>
+                <aside>Tipo de violência:</aside>
+                <aside class="tiposViolencia">
+                    <input type="radio" name="violencia" id="racismo" class="itemTiposViolencia" onclick="Outro()"><label for="racismo">Racismo</label><br>
+                    <input type="radio" name="violencia" id="lgbt" class="itemTiposViolencia" onclick="Outro()"><label for="lgbt">LGBTfobia</label><br>
+                    <input type="radio" name="violencia" id="feminicidio" class="itemTiposViolencia" onclick="Outro()"><label for="feminicidio">Feminicidio</label><br>
+                    <input type="radio" name="violencia" id="capacitismo" class="itemTiposViolencia" onclick="Outro()"><label for="racismo">Capacitismo</label><br>
+                    <aside style="display: flex;">
+                        <input type="radio" name="violencia" id="outro" class="itemTiposViolencia" onclick="Outro()"><label for="outro">Outro</label><input type="text" id="inputOutro"><br>
+                    </aside>
+                </aside>
+                <aside class="itensForm">Local: <input type="text"><br></aside>
+                <aside class="itensForm">Deseja descrever como ocorreu? 
+                <input type="radio" name="como" id="como" onclick="Comos()" style="margin-left: 10px;"> Sim
+                <input type="radio" name="como" id="como" onclick="Comon()" style="margin-left: 10px;" checked> Não</aside>
+                <aside style="display: none;" id="comotxt"><input type="text" id="inputComo"></aside>
+                <aside class="botoesFormAs">
+                    <input type="button" value="Enviar" class="botoesForm">
+                    <input type="button" value="Limpar" class="botoesForm" onclick="Limpar()">
+                </aside>
+            </fieldset>
+            
+        </form>
+    </main>
+    <script>
+        function Comos() {
+            texto = document.getElementById("comotxt");
+            texto.style.display = "block";
+        }
+        function Comon() {
+            texto = document.getElementById("comotxt");
+            texto.style.display = "none";
+        }
+        contador = 0;
+        racismo = document.getElementById("racismo");
+        lgbt = document.getElementById("lgbt");
+        feminicidio = document.getElementById("feminicidio");
+        capacitismo = document.getElementById("capacitismo");
+        btnOutro = document.getElementById("outro");
+        txtOutro = document.getElementById("inputOutro");
+        function Outro() {
+            if (outro.checked == true) {
+                txtOutro.style.display = "block";
+            } else if (racismo.checked == true || lgbt.checked == true || feminicidio.checked == true || capacitismo.checked == true) {
+                txtOutro.style.display = "none";
+            }
+        }
+        function Limpar() {
+            window.location.reload()
+        }
+    </script>
+</body>
+</html>

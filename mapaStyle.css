@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif
+}
+body {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "main main main";
+    grid-template-rows: auto 100vh;
+}
+
+
+.cabecalho {
+    display: flex;
+    grid-area: header;
+    background-color: #153D30;
+    padding: 30px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+}
+.listaNav {
+    display: flex;
+}
+.itemNav {
+    list-style: none;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+.linkNav {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+.linkNav:hover {
+    background-color: #042326;
+}
+
+
+.secaoCabecalho {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+.plankImgBarra {
+    width: 150px;
+}
+.perfilLogin {
+    width: 20px;
+    padding: 10px;
+    border-radius: 50%;
+}
+.perfilLogin:hover {
+    cursor: pointer;
+    background-color: #042326;
+}
+
+
+.conteudoPrincipal {
+    grid-area: main;
+    display: flex;
+    border: 2px solid rgb(255, 196, 129);
+    width: 900px;
+    height: 700px;
+    margin: 10vh auto auto auto;
+    border-radius: 30px;
+}
+.secaoFiltro {
+    background-color: rgb(255, 238, 218);
+    width: 200px;
+    height: 700px;
+    border-right: 1px solid rgb(255, 196, 129);
+    border-radius: 30px 0px 0px 30px;
+}
+.cabecalhoFiltro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0px 15px 0px;
+}
+.tituloFiltro {
+    text-align: center;
+    font-size: x-large;
+    margin-bottom: 10px;
+}
+.imgFiltro {
+    background-color: rgb(255, 215, 169);
+    width: 40px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+.imgFiltro:hover {
+    cursor: pointer;
+    background-color: rgb(255, 184, 102);
+}
+.itensFiltro {
+    opacity: 0;
+    transition: .5s linear;
+    margin: auto;
+    width: 170px;
+}
+.conjuntoFiltro {
+    margin-bottom: 15px;
+}
+.itemPrincipal {
+    cursor: default;
+    font-size: larger;
+    font-weight: bold;
+}
+.subItem {
+    color: rgb(105, 105, 105);
+    font-size: medium;
+    margin-left: 20px;
+    line-height: 20px;
+}
+.subItem:hover {
+    cursor: pointer;
+    color: black;
+}
+.mapa {
+    width: 700px;
+    height: 700px;
+    border: 0px solid black;
+    border-radius: 0px 30px 30px 0px;
+}
